@@ -62,7 +62,7 @@ h1 {
     position: absolute;
 }
 
-.more {
+.btn {
     border-width: 2px;
     border-color: #007bff;
     background-color: inherit;
@@ -73,6 +73,12 @@ h1 {
     font-size: 0.9em;
     color: #333;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #007bff;
 }
 
 nav {
@@ -228,6 +234,12 @@ input[type=submit]{
     font-size: 0.9em;
     color: #333;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+input[type=submit]:hover {
+    color: #fff;
+    background-color: #007bff;
 }
 
 .social-media {
