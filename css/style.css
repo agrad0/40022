@@ -226,6 +226,12 @@ label[for="drop-nav"] {
     font-size: 0.9em;
     color: #333;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+input[type=submit]:hover {
+    color: #fff;
+    background-color: #007bff;
 }
 
 .contact input[type=submit]:hover {
