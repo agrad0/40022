@@ -308,7 +308,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .header .main-header {
+    header .main-header {
         font-size: 3em;
     }
 
