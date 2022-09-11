@@ -150,7 +150,7 @@ label[for="drop-nav"] {
 .portfolio-container .gall-element {
     cursor: pointer;
     flex-basis: 25%;
-    height: 200px;
+    max-height: 200px;
     position: relative;
 }
 
@@ -265,16 +265,11 @@ footer {
 
 }
 
-@media screen and (min-width: 1201px) {
-	body {
-		max-width: 1170px;
-	}
-}
-
 @media screen and (max-width: 1200px) {
-	body {
+	.portfolio-container {
 		max-width: 992px;
 	}
+
     header,
     section {
        padding: 60px 0; 
@@ -282,11 +277,11 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
-	body {
+	.portfolio-container {
 		max-width: 768px;
 	}
     .gall-element {
-        width: 49%;
+        flex-basis: 50%;
     }
     header,
     section {
@@ -295,11 +290,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-	body {
+	.portfolio-container {
 		max-width: 95%;
 	}
     .gall-element {
-        width: 99%;
+        flex-basis: 100%;
     }
     header,
     section {
@@ -320,6 +315,7 @@ footer {
     .contact input[type="text"],
     .contact input[type="email"] {
         flex-basis: 100%;
+        margin-right: 0;
     }
 
     label[for="drop-nav"] {
