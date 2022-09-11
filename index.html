@@ -5,39 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body>
     <header>
-        <h1> FRONT END DEVELOPER <br>
-            <hr class = linesmall> 
-            </hr>
+        <h1 class="main-header"> front end developer <br> 
         </h1>
-        <p class = parsmall>
+        <hr class = linesmall> 
+        </hr>
+        <p>
             HTML &nbsp<span id="interpunct">  CSS &nbsp</span> Javascript
         </p>
-       <button class="more">
-        DOWIEDZ SIĘ WIĘCEJ
-       </button>
+       <a href="#about" class="btn">
+            dowiedz się więcej
+        </a>
     </header>
-    <nav>
+    <nav class="main-menu">
+        <label for="drop-nav">Menu</label>
+        <input type="checkbox" id="drop-nav">
         <ul class="menu">
-            <li>
+            <li class="menu-item">
                 <a href=#about>O MNIE</a>    
             </li>
-            <li>
+            <li class="menu-item">
                 <a href=#portfolio>PORTFOLIO</a>
             </li>
-            <li>
+            <li class="menu-item">
                 <a href=#contact>KONTAKT</a>
             </li>
         </ul>
     </nav>
     
-    <section id="about">
-        <h2>
-            O MNIE
+    <section id="about" class="about">
+        <h2 class="section-header">
+            o mnie
         </h2>
         <hr class = linesmall> 
         </hr>
@@ -54,92 +58,93 @@
         </p>
     </section>
 
-    <section id="portfolio">
-        <h2>
-            PORTFOLIO
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-header">
+            portfolio
         </h2>
         <hr class = linesmall> 
         </hr>
         <br>
-        <section id="gallery">
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-1.jpg" alt="1">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-2.jpg" alt="2">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-3.jpg" alt="3">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-4.jpg" alt="4">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-5.jpg" alt="5">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-6.jpg" alt="6">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-7.jpg" alt="5">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-8.jpg" alt="7">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-9.jpg" alt="8">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-10.jpg" alt="9">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-11.jpg" alt="10">
-        </a> 
-        <a href class="gall-element">
-            <h5>Projekt</h5>
-            <img src="../img/portfolio/photo-12.jpg" alt="11">
-        </a> 
-        </section>
+        <div class="portfolio-container">
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-1.jpg" alt="1">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-2.jpg" alt="2">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-3.jpg" alt="3">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-4.jpg" alt="4">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-5.jpg" alt="5">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-6.jpg" alt="6">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-7.jpg" alt="7">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-8.jpg" alt="8">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-9.jpg" alt="9">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-10.jpg" alt="10">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-11.jpg" alt="11">
+                <h3>Projekt</h3>
+            </a> 
+            <a href="" class="gall-element">
+                <img src="../img/portfolio/photo-12.jpg" alt="12">
+                <h3>Projekt</h3>
+            </a> 
+    </div>
     </section>
    
-    <section id="contact"> 
-        <h2>
-            KONTAKT
-        </h2>
-        <hr class = linesmall> 
-        </hr>
-        <form action="">
-            <label for="name"></label>
-            <input type="text" placeholder="Imię" id="name">
-            
-            <label for="email"></label>
-            <input type="text" placeholder="Email" id="email">
-            
-            <label for="textarea"></label>
-            <input type="text" placeholder="Wiadomość" id="message"><br>
-            
-            <input type="submit" value="WYŚLIJ WIADOMOŚĆ">
+    <section id="contact" class="contact"> 
+        <div class="contact-container">
+            <h2 class="section-header">
+            kontakt <br>
+            </h2>
+            <hr class = linesmall> 
+            </hr>
+            <form action="">
+                <label for="name"></label>
+                <input type="text" placeholder="Imię" id="name" name="name">
+                
+                <label for="email"></label>
+                <input type="text" placeholder="Email" id="email" name="email">
+                
+                <label for="textarea"></label>
+                <input type="text" placeholder="Wiadomość" id="message"><br>
+                
+                <input type="submit" class="btn" value="wyślij wiadomość">
 
 
-        </form>
-        <div class="social-media">
-            <a href="" class="social-fb"><i class="fab fa-facebook-square"></i></a>
-            <a href="" class="social-tt"><i class="fab fa-twitter"></i></a>
-            <a href="" class="social-ig"><i class="fab fa-instagram"></i></a>
-            <a href="" class="social-yt"><i class="fab fa-youtube"></i></a>
+            </form>
+            <div class="social-media">
+                <a href="" class="social-fb"><i class="fab fa-facebook-square"></i></a>
+                <a href="" class="social-tt"><i class="fab fa-twitter"></i></a>
+                <a href="" class="social-ig"><i class="fab fa-instagram"></i></a>
+                <a href="" class="social-yt"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
-
     </section>
     <footer>
         Copyright © Akademia 108 - Szkoła Programowania

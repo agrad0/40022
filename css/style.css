@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    
 }
 
 header {
@@ -11,28 +10,42 @@ header {
     background-size: cover;
     background-position: 0% 49%;
     color: #007bff;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
     font-weight: 300;
     text-align: center;
 }
 
-h1 {
+section {
+    padding: 120px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-header {
     font-size: 4.2em;
     vertical-align: 10%;
     margin-bottom: 2%;
+    text-transform: uppercase;
+}
+
+.section-header  {
+    font-size: 1.9em;
+    text-transform: uppercase;
 }
 
 .linesmall {
     width: 5vh;
     height: 2px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     border-color: #007bff;
     background-color: #007bff;
 }
 
-.parsmall {
+header p {
     margin-top: 5px;
     line-height: 1.4;
     font-size: 1.3em;
@@ -62,25 +75,28 @@ h1 {
     position: absolute;
 }
 
-.more {
-    border-width: 2px;
-    border-color: #007bff;
-    background-color: inherit;
+.btn {
+    border: 2px groove #007bff;
     padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
+    margin: auto;
     font-size: 0.9em;
     color: #333;
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+.more:hover {
+    color: #fff;
+    background-color: #007bff;
 }
 
 nav {
     background-color: #007bff;
-    padding: 0;
 }
 
 .menu {
+    margin: auto;
     list-style-type: none;
     justify-content: center;
     display: flex;
@@ -91,30 +107,28 @@ nav {
     padding: 15px 0 15px 0;
 }
 
-li {
-    margin-right: 4%;
+#drop-nav {
+    display: none;
 }
 
-.menu:last-child {
-    margin: 0;
+label[for="drop-nav"] {
+    display: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.menu-item {
+    padding: 10px;
 }
 
-#about {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    text-align: center;
+.menu-item:hover {
+    color: #007bff;
+    background-color: #fff;
+}
+
+/* about-section styles */
+
+.about {
     max-width: 700px;
-    margin: 0 auto;    
-}
-
-h2  {
-    font-size: 1.9em;
-
+    margin: auto;    
 }
 
 .myphoto {
@@ -122,26 +136,31 @@ h2  {
     font-weight: 300;
 }
 
-#portfolio {
+/* Portfolio-section styles */
+
+.portfolio {
     background-color: #f2f1ed;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-#gallery {
+.portfolio-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    width: 70%;
-    height: 60%;
 }
 
-h5 {
+.portfolio-container .gall-element {
+    cursor: pointer;
+    flex-basis: 25%;
+    height: 200px;
+    position: relative;
+}
+
+.portfolio-container .gall-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-container .gall-element h3 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -155,68 +174,47 @@ h5 {
     font-weight: 300;
     font-size: 3em;
     opacity: 0;
-    transition: all 1s;
+    transition: all .3s;
 }
 
-.gall-element {
-    cursor: pointer;
-    width: 25%;
-    position: relative;
-}
-
-h5:hover {
+.portfolio-container .gall-element h3:hover {
     opacity: 1;
 }
 
-img {
-    /* object-fit: contain; */
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#contact {
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding-top: 120px;
-    padding-bottom: 50px;
-    margin: 0 auto; 
 }
 
-form {
-    align-self: center;
+.contact form {
     display: flex;
     max-width: 700px;
     flex-wrap: wrap;
-    text-align: center;
-    margin-top: 3%;
-    width: 100%;
-    justify-content: center;
-    border-top: #777;
+    margin: 40px auto 30px auto;
+    justify-content: space-between;
 }
 
-input[id="name"],
-input[id="email"] {
-    width: 40%;
+.contact input[id="name"],
+.contact input[id="email"] {
+    flex-basis: 49%;
     height: 5vh;
     margin-bottom: 10px;
-    
 }
 
-input[id="name"] {
-    margin-right: 10px;
-    
+.contact input[id="name"] {
+    margin-right: 2%;
 }
 
-input[id="message"] {
-    width: 81.5%;
+.contact input[id="message"] {
+    flex-basis: 100%;
     height: 7vh;
     padding: 0;
+    margin-bottom: 10px;
 }
 
-input[type=submit]{
+.contact input[type=submit]{
     margin-top: 6px;
     border-width: 2px;
     border-color: #007bff;
@@ -230,18 +228,24 @@ input[type=submit]{
     cursor: pointer;
 }
 
+.contact input[type=submit]:hover {
+    color: #fff;
+    background-color: #007bff;
+}
+
+
 .social-media {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    max-width: 20%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .social-fb,
 .social-tt,
 .social-ig,
 .social-yt {
-    flex-basis: 2%;
+    flex-basis: 15%;
     color: #007bff;
 }
 
@@ -261,11 +265,14 @@ footer {
 	}
 }
 
-
 @media screen and (max-width: 1200px) {
 	body {
 		max-width: 992px;
 	}
+    header,
+    section {
+       padding: 60px 0; 
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -275,6 +282,10 @@ footer {
     .gall-element {
         width: 49%;
     }
+    header,
+    section {
+       padding: 60px 0; 
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -283,5 +294,49 @@ footer {
 	}
     .gall-element {
         width: 99%;
+    }
+    header,
+    section {
+       padding: 40px 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header .main-header {
+        font-size: 3em;
+    }
+
+    .myphoto {
+        max-height: 200px;
+        max-width: 200px;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"] {
+        flex-basis: 100%;
+    }
+
+    label[for="drop-nav"] {
+        display: block;
+        padding: 14px 20px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #drop-nav:checked + .menu {
+        display: block;
+    }
+
+    .main-menu .menu .menu-item {
+        display: block;
+        text-align: right;
+        margin: 0;
     }
 }
