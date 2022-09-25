@@ -16,6 +16,7 @@ header {
 }
 
 section {
+    margin: auto;
     padding: 120px 0;
     text-align: center;
 }
@@ -86,7 +87,7 @@ header p {
     text-transform: uppercase;
 }
 
-.more:hover {
+.btn:hover {
     color: #fff;
     background-color: #007bff;
 }
@@ -127,8 +128,13 @@ label[for="drop-nav"] {
 /* about-section styles */
 
 .about {
-    max-width: 700px;
     margin: auto;    
+}
+
+.parsmall {
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
 }
 
 .myphoto {
@@ -150,7 +156,6 @@ label[for="drop-nav"] {
 .portfolio-container .gall-element {
     cursor: pointer;
     flex-basis: 25%;
-    max-height: 200px;
     position: relative;
 }
 
@@ -183,9 +188,12 @@ label[for="drop-nav"] {
 
 .contact {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.contact-container {
+    max-width: 700px;
 }
 
 .contact form {
@@ -207,7 +215,7 @@ label[for="drop-nav"] {
     margin-right: 2%;
 }
 
-.contact input[id="message"] {
+.contact input[id="textarea"] {
     flex-basis: 100%;
     height: 7vh;
     padding: 0;
@@ -229,16 +237,10 @@ label[for="drop-nav"] {
     transition: all 0.5s;
 }
 
-input[type=submit]:hover {
-    color: #fff;
-    background-color: #007bff;
-}
-
 .contact input[type=submit]:hover {
     color: #fff;
     background-color: #007bff;
 }
-
 
 .social-media {
     max-width: 20%;
@@ -265,35 +267,33 @@ footer {
 
 }
 
-@media screen and (max-width: 1200px) {
-	.portfolio-container {
-		max-width: 992px;
+@media screen and (min-width: 1200px) {
+	section {
+		max-width: 1170px;
 	}
 
-    header,
-    section {
-       padding: 60px 0; 
-    }
 }
 
-@media screen and (max-width: 992px) {
-	.portfolio-container {
-		max-width: 768px;
+@media screen and (max-width: 1200px) {
+	section {
+		max-width: 992px;
 	}
-    .gall-element {
-        flex-basis: 50%;
-    }
-    header,
+}
+@media screen and (max-width: 992px) {
     section {
-       padding: 60px 0; 
+        max-width: 768px;
+        padding: 60px 0;
     }
+    .portfolio-container .gall-element {
+        flex-basis: 50%;
+    } 
 }
 
 @media screen and (max-width: 768px) {
-	.portfolio-container {
-		max-width: 95%;
-	}
-    .gall-element {
+    section {
+        max-width: 95%;
+    }
+    .portfolio-container .gall-element {
         flex-basis: 100%;
     }
     header,
